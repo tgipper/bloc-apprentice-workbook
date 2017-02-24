@@ -10,16 +10,41 @@
 
 ### Questions
 
-1. What is HTML and what is it used for?
-2. What is the difference between an ID and a class?
-3. What does it mean to write "semantic" HTML?
+1. What is HTML and what is it used for? It is a text language used for creating web pages.
+2. What is the difference between an ID and a class? An ID is used for a unique tag that appears once on a page, a class can be used in different tags throughout a page.
+3. What does it mean to write "semantic" HTML? Writing semantic HTML means to use tags that are more clear about their purpose. An example would be to use a header tag instead of a div tag.
 
 ### Exercises
 
 1. Write a paragraph tag with a class of "highlight" and content "Watch out!".
+```html
+<p class="highlight">Watch out!</p>
+```
 2. Write an HTML image tag to show an image called `profile-picture.jpg`.
+```html
+<img src="profile-picture.jpg" alt="profile-picture">
+```
 3. Write a link tag that links to http://google.com.
+```html
+<a href="http://www.google.com">
+```
 5. Write an complete standard HTML document outline (including a DOCTYPE, and `<html>`, `<head>`, and `<body>` tags).
+```html
+<!DOCTYPE html>
+<head>
+<script src="main.js">
+<link type="text/css" rel="stylesheet" src="main.css">
+<title></title>
+</head>
+<body>
+  <ol>
+    <li>A Bag of Bones</li>
+    <li>Musicophelia</li>
+    <li>So You Want to be a Wizard</li>
+  </ol>
+</body>
+</html>
+```
 6. Inside of the code for the previous exercise, write the appropriate tag to link to a script file called `main.js`.
 7. Inside of the code for the previous exercise, write the appropriate tag to link to a stylesheet file called `main.css`.
 8. Write a numbered list in HTML and list three of your favorite books.
@@ -27,33 +52,46 @@
 
   ```html
   <div>
-  <ul>
-  <li>Item 1</li>
-    <li>Item 2</li>
-  <li>Item 3</li>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
     </ul>
-    </div>
+  </div>
   ```
 
 ## CSS
 
 ### Questions
 
-1. What is CSS and what is it used for?
-2. What is the CSS box model?
-3. What's the difference between margin and padding?
+1. What is CSS and what is it used for? It is a stylesheet, used to change the appearance of an HTML document.
+2. What is the CSS box model? Different sections of CSS are visually displayed as boxes. The boxes are then stacked on top of each other going down the web page, but CSS is able to change the way the boxes are arranged so that they can be different heights, widths, or side by side.
+3. What's the difference between margin and padding? Padding puts space between the content of a box and the border of the box, whereas margin changes the space between the border and the edge of other document elements.
 
 ### Exercises
 
 1. Write a CSS rule to make the text of all `h1` tags red.
+```CSS
+h1 {
+color: red;
+}
+```
 2. Write a CSS rule to make the background color of the link with `class="btn"` blue:
-
+```CSS
+.class {
+color: blue;
+}
+```
   ```html
   <a href="#" class="btn">Learn more</a>
   ```
 
 3. Write a CSS rule to give the first paragraph in the following HTML a font size of `20px`, but not the second paragraph.
-
+```CSS
+header p {
+font-size: 20px;
+}
+```
   ```html
   <header class="jumbotron">
     <p>Hello, World!</p>
