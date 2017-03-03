@@ -104,17 +104,30 @@ font-size: 20px;
 
 ### Questions
 
-1. What is a function? What are they used for?
-2. What is the difference between `==` and `===`?
-3. What is the difference between global and local scope variables?
-4. What is a boolean value?
-5. What is an array?
+1. What is a function? What are they used for? A function is a piece of code designed to perform a specific task.
+2. What is the difference between `==` and `===`? '==' compares two values even if they aren't the same type; whereas "===" requires the values to be of the same type if they will be equal to each other.
+3. What is the difference between global and local scope variables? Global scope variables can be used throughout the program and can be accessed from anywhere in the program. Local scope variables are only accessible within their own sphere, so local variables can not be references by parts of the program outside of the local variable's scope.
+4. What is a boolean value? A boolean value is either true or false.
+5. What is an array? An array is a variable that can hold more than one value at a time.
 
 ### Exercises
 
 1. Write a line that declares a variable called `myName` and set its value to your name.
+```javascript
+var myName = "Trevor";
+```
 2. Write a loop that logs the numbers 1 through 10 to the console.
+```javascript
+for (var i = 1; i <= 10; i++){
+  console.log(i);
+}
+```
 3. Translate the following pseudocode into JavaScript: if `score` is greater than `3` and `lives` is greater than `0`, alert "You win!".
+```javascript
+  if ( score > 3 && lives > 0){
+    alert("You win!");
+  }
+```
 4. Write a function `sayHello` that takes one argument, a name, and logs "Hello, <name>!" to the console. Then, call the function below the function definition and pass in your name as the argument.
 5. What would the following script log to the console?
 
