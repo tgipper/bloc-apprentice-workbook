@@ -129,6 +129,12 @@ for (var i = 1; i <= 10; i++){
   }
 ```
 4. Write a function `sayHello` that takes one argument, a name, and logs "Hello, <name>!" to the console. Then, call the function below the function definition and pass in your name as the argument.
+```javascript
+function sayHello (name){
+  console.log("Hello, " + name + "!");
+};
+sayHello ("Trevor");
+```
 5. What would the following script log to the console?
 
   ```javascript
@@ -142,6 +148,7 @@ for (var i = 1; i <= 10; i++){
 
   console.log(currentSong);
   ```
+"Friday, Friday"
 
 6. What would the following script log to the console?
 
@@ -154,6 +161,7 @@ for (var i = 1; i <= 10; i++){
 
   console.log(result);
   ```
+10
 
 7. What would the following script log to the console?
 
@@ -172,10 +180,46 @@ for (var i = 1; i <= 10; i++){
 
   console.log(helloGoodbye("Sarah"));
   ```
+  Technically, it'll be an error because there should be a + between the name and the " !" string in both sayHello and sayGoodbye. If it's fixed, it wil log:
+  
+  "Hello Sarah ! Goodbye Sarah !"
 
 8. Write a function `findLongestWord()` that takes an array of words and returns the length of the longest one.
+```javascript
+function findLongestWord(array){
+  var longestWord = 0;
+  for(var i = 0; i < array.length; i++){
+    if (array[i].length > longestWord){
+      longestWord = array[i].length;
+    };
+  };
+  console.log(longestWord);
+};
+```
+
 9. Define a function `sum()` that sums all the numbers in an array of numbers. For example, `sum([1,2,3,4])` should return 10.
+```javascript
+function sum(nums){
+  var total = 0;
+  for(var i = 0; i < nums.length; i++){
+    total += nums[i];
+  };
+  console.log(total)
+};
+```
+
 10. Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
+```javascript
+function vow (letter){
+  newLetter = letter.toUpperCase();
+  if (newLetter == "A" || newLetter == "E" || newLetter == "I" || newLetter == "O" || newLetter == "U"){
+    console.log(true);
+  } else {
+    console.log(false);
+  };
+};
+```
+
 11. Write the correct line to make `"Woof!"` show up in the console based on this script:
 
   ```javascript
@@ -186,34 +230,36 @@ for (var i = 1; i <= 10; i++){
       console.log("Woof!");
     }
   };
+  console.log(pet.speak());
   ```
 
-12. Using the same script as above, write the correct line to log the dog's name to the console.
+12. Using the same script as above, write the correct line to log the dogs name to the console.
+console.log(pet.name);
 
 ## Command Line
 
 ### Questions
 
-1. What is the command line and what is it used for?
-2. What does the command `ls` do?
-3. What does the command `pwd` do?
-4. What does the following command do: `cd my-cool-project`
+1. What is the command line and what is it used for? The command line is a way of interfacing with a computer via text input.
+2. What does the command `ls` do? It prints all of the files and folders within the current folder.
+3. What does the command `pwd` do? It prints the name of the current directory.
+4. What does the following command do: `cd my-cool-project` Moves to the directory "my-cool-project"
 
 ### Exercises
 
-1. Write the command to make a new directory called "my-cool-project".
-2. Write the command to create a file called "index.html".
-3. Write the command to delete a file called "main.css".
+1. Write the command to make a new directory called "my-cool-project". mkdir "my-cool-project"
+2. Write the command to create a file called "index.html". touch index.html
+3. Write the command to delete a file called "main.css". rm main.css
 
 ## Git
 
 ### Questions
 
-1. What is Git and what is it used for?
-2. What's the difference between a local repository and a remote repository?
+1. What is Git and what is it used for? Git is a version control system used to track changes in files.
+2. Whats the difference between a local repository and a remote repository? A local repository is saved on a local computer, a remote repository is stored on a network.
 
 ### Exercises
 
-1. Write the command that you would use to create a new local Git repository.
-2. Write the command to stage a file called `index.html` to be committed.
-3. Write the command to view the current status of the git repository.
+1. Write the command that you would use to create a new local Git repository. git init
+2. Write the command to stage a file called `index.html` to be committed. git add index.html
+3. Write the command to view the current status of the git repository. git status
